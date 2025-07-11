@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeGuard - Women Safety App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SafeGuard</h1>
+            <p>Your Personal Safety Companion</p>
+        </header>
+
+        <main>
+            <!-- Emergency Button -->
+            <section class="emergency-section">
+                <button id="emergencyBtn" class="emergency-btn">
+                    <span class="emergency-icon">🚨</span>
+                    <span class="emergency-text">EMERGENCY</span>
+                </button>
+                <p class="emergency-info">Tap to send SOS to emergency contacts</p>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="action-buttons">
+                    <button id="shareLocationBtn" class="action-btn">
+                        <span class="icon">📍</span>
+                        Share Location
+                    </button>
+                    <button id="fakeCallBtn" class="action-btn">
+                        <span class="icon">📞</span>
+                        Fake Call
+                    </button>
+                    <button id="alarmBtn" class="action-btn">
+                        <span class="icon">🔔</span>
+                        Sound Alarm
+                    </button>
+                </div>
+            </section>
+
+            <!-- Emergency Contacts -->
+            <section class="contacts-section">
+                <h2>Emergency Contacts</h2>
+                <div class="contact-form">
+                    <input type="text" id="contactName" placeholder="Contact Name" maxlength="30">
+                    <input type="tel" id="contactPhone" placeholder="Phone Number" maxlength="15">
+                    <button id="addContactBtn" class="add-btn">Add Contact</button>
+                </div>
+                <div id="contactsList" class="contacts-list"></div>
+            </section>
+
+            <!-- Safety Tips -->
+            <section class="tips-section">
+                <h2>Safety Tips</h2>
+                <div class="tips-container">
+                    <div class="tip-card">
+                        <h3>Stay Alert</h3>
+                        <p>Always be aware of your surroundings, especially in unfamiliar areas.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Trust Your Instincts</h3>
+                        <p>If something feels wrong, don't ignore it. Remove yourself from the situation.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Share Your Location</h3>
+                        <p>Let trusted friends or family know where you're going and when you'll return.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Status Messages -->
+        <div id="statusMessage" class="status-message"></div>
+
+        <!-- Fake Call Modal -->
+        <div id="fakeCallModal" class="modal">
+            <div class="modal-content">
+                <div class="call-interface">
+                    <div class="caller-info">
+                        <div class="caller-avatar">👤</div>
+                        <h3>Mom</h3>
+                        <p>Calling...</p>
+                    </div>
+                    <div class="call-actions">
+                        <button id="answerBtn" class="call-btn answer">📞</button>
+                        <button id="declineBtn" class="call-btn decline">📵</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
